@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        Playme();
+    function Playme () {
+        let computerNum = Math.floor(Math.random() * 3) + 1;
+        promptUser = "rock"//window.prompt("Choose Rock, Paper, or Scissors");
+        User = promptUser.toLowerCase();
+        console.log(User);
+        let computerChoice;
+        switch(computerNum)
+        {
+            //1: rock. 2: paper 3: scissors
+            case 1:
+            computerChoice = "rock"; 
+            break;
+            case 2:
+            computerChoice = "paper";
+            break;
+            case 3:
+            computerChoice = "scissors";
+            break;
+        }
+        //after setting the choice in the switch statement, computer choice gets out of the code block and keeps what its set to
+        console.log(computerChoice)
+        //Now see what the player got, and send in the corresponding function
+        switch(User)
+        {
+            //1: rock. 2: paper 3: scissors
+            case "rock":
+                ChoseRock(computerChoice);
+            break;
+            case "paper":
+                ChosePaper(computerChoice);
+            break;
+            case "scissors":
+                ChoseScissors(computerChoice);
+            break;
+        }
+    }
+    //We only need the computers input, since we know the player Chose Rock
+    function ChoseRock (Computer)  {
+        switch(Computer)
+        {
+            case "paper":
+            console.log("The computer chose " + Computer + " so you lose!");
+            break;
+            case "scissors":
+            console.log("The computer chose " + Computer + " so you win!");
+            break;
+            default:
+            console.log("There was a tie");
+            break;
+        }
+    }
+    //We only need the computers input, since we know the player Chose Paper
+    function ChosePaper (Computer)  {
+        switch(Computer)
+        {
+            case "scissors":
+            console.log("The computer chose " + Computer + " so you lose!");
+            break;
+            case "rock":
+            console.log("The computer chose " + Computer + " so you win!");
+            break;
+            default:
+            console.log("There was a tie");
+            break;
+        }
+    }
+    //We only need the computers input, since we know the player Chose Scissors
+    function ChoseScissors (Computer)  {
+        switch(Computer)
+        {
+            case "rock":
+            console.log("The computer chose " + Computer + " so you lose!");
+            break;
+            case "paper":
+            console.log("The computer chose " + Computer + " so you win!");
+            break;
+            default:
+            console.log("There was a tie");
+            break;
+        }
+    }
+    </script>
+</html>
