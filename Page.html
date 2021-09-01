@@ -2,9 +2,11 @@
 <html>
     <script>
         Playme();
+        Playme();
+        Playme();
     function Playme () {
         let computerNum = Math.floor(Math.random() * 3) + 1;
-        promptUser = "rock"//window.prompt("Choose Rock, Paper, or Scissors");
+        promptUser = window.prompt("Choose Rock, Paper, or Scissors");
         User = promptUser.toLowerCase();
         console.log(User);
         let computerChoice;
