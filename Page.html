@@ -9,6 +9,27 @@
     <div class="placeholder-div">
     <p id="winText">Sample text until someone wins</p>
     </div>
+    <style>
+        #choices {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        button {
+            background-color: #f1445b; /* Green */
+            border: dashed;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;  
+        }
+        #winText {
+            font-family: "Comic Sans MS", "Comic Sans", cursive;
+            font-size: 23px;
+        }
+    </style>
     <script>
         //Get the win text and its div so we can change it's text later.
        const div = document.querySelector(".placeholder-div");
