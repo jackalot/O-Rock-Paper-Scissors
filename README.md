@@ -1,5 +1,5 @@
 # O-Rock-Paper-Scissors
-Plan:
+Pre-Ui Plan:
 Playme function {
     does a math.floor(math.random() * 3) + 1 
     1: rock. 2: paper 3: scissors
