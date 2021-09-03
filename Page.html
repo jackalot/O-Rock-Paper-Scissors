@@ -6,7 +6,14 @@
         <button class="paper">Paper</button>
         <button class="scissors">Scissors</button>
     </div>
+    <div class="placeholder-div">
+    <p id="winText">Sample text until someone wins</p>
+    </div>
     <script>
+        //Get the win text and its div so we can change it's text later.
+       const div = document.querySelector(".placeholder-div");
+       const winText = document.querySelector("p")
+       //Get all the buttons and add event listeners
        const rockBtn = document.querySelector(".rock");
        const paperBtn = document.querySelector(".paper");
        const scissorsBtn = document.querySelector(".scissors");
@@ -19,6 +26,7 @@
         })
        })
        
+
     function Playme (User) {
         let computerNum = Math.floor(Math.random() * 3) + 1;
         console.log("User chose " + User);
@@ -58,13 +66,17 @@
         switch(Computer)
         {
             case "paper":
-            console.log("The computer chose " + Computer + " so you lose!");
+            winText.textContent = "The computer chose " + Computer + " so you lose!";
+            div.appendChild(winText);
             break;
             case "scissors":
-            console.log("The computer chose " + Computer + " so you win!");
+            winText.textContent = "The computer chose " + Computer + " so you win!";
+            div.appendChild(winText);    
             break;
             default:
-            console.log("There was a tie");
+            winText.textContent = "There was a tie!";
+            div.appendChild(winText);  
+            
             break;
         }
     }
@@ -73,13 +85,16 @@
         switch(Computer)
         {
             case "scissors":
-            console.log("The computer chose " + Computer + " so you lose!");
+            winText.textContent = "The computer chose " + Computer + " so you lose!";
+            div.appendChild(winText);
             break;
             case "rock":
-            console.log("The computer chose " + Computer + " so you win!");
+            winText.textContent = "The computer chose " + Computer + " so you win!";
+            div.appendChild(winText);   
             break;
             default:
-            console.log("There was a tie");
+            winText.textContent = "There was a tie!";
+            div.appendChild(winText);  
             break;
         }
     }
@@ -88,13 +103,16 @@
         switch(Computer)
         {
             case "rock":
-            console.log("The computer chose " + Computer + " so you lose!");
+            winText.textContent = "The computer chose " + Computer + " so you lose!";
+            div.appendChild(winText);
             break;
             case "paper":
-            console.log("The computer chose " + Computer + " so you win!");
+            winText.textContent = "The computer chose " + Computer + " so you win!";
+            div.appendChild(winText);   
             break;
             default:
-            console.log("There was a tie");
+            winText.textContent = "There was a tie!";
+            div.appendChild(winText);   
             break;
         }
     }
