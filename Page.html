@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html>
+    <h1>Choose Rock, Paper, or Scissors</h1>
+    <div id="choices">
+        <button class="rock">Rock</button>
+        <button class="paper">Paper</button>
+        <button class="scissors">Scissors</button>
+    </div>
     <script>
-        Playme();
-        Playme();
-        Playme();
-    function Playme () {
+       const rockBtn = document.querySelector(".rock");
+       const paperBtn = document.querySelector(".paper");
+       const scissorsBtn = document.querySelector(".scissors");
+
+       const buttons = document.querySelectorAll("button");
+       buttons.forEach((button) => {
+
+        button.addEventListener('click', () => {
+            Playme(button.className);
+        })
+       })
+       
+    function Playme (User) {
         let computerNum = Math.floor(Math.random() * 3) + 1;
-        promptUser = window.prompt("Choose Rock, Paper, or Scissors");
-        User = promptUser.toLowerCase();
-        console.log(User);
+        console.log("User chose " + User);
         let computerChoice;
         switch(computerNum)
         {
@@ -24,7 +37,7 @@
             break;
         }
         //after setting the choice in the switch statement, computer choice gets out of the code block and keeps what its set to
-        console.log(computerChoice)
+        console.log("Computer chose " + computerChoice)
         //Now see what the player got, and send in the corresponding function
         switch(User)
         {
